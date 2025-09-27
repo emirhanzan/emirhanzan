@@ -1,16 +1,50 @@
-## Hi there 👋
+# 🖤 Siyah-Beyaz Resim Dönüştürücü
 
-<!--
-**emirhanzan/emirhanzan** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Bu proje, bir görüntüyü otomatik olarak **siyah-beyaz** hale getiren basit ama etkili bir Python betiğidir.  
+Kod, gri tonlamaya çevrilmiş bir resmi 128 eşik değeri kullanarak tamamen siyah ve beyaz piksellere dönüştürür.
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 📷 Örnek:  
+**Girdi:** `kou.png`  
+**Çıktı:** `kou renksiz.png` _(sadece siyah ve beyaz piksellerle)_
+
+---
+
+## 🛠️ Kullanılan Teknolojiler
+
+- **Python 3**
+- **Pillow** (PIL - Python Imaging Library)
+
+---
+
+## 🚀 Nasıl Kullanılır?
+
+### 1. Pillow Kütüphanesini Kur
+
+Terminal veya komut satırından aşağıdaki komutu gir:
+
+```bash
+pip install Pillow
+```
+from PIL import Image
+```python
+def convert_to_bw(input_path, output_path):
+    # Resmi gri tona çeviriyoruz
+    img = Image.open(input_path).convert('L')
+
+    # Gri değeri 128'den büyükse beyaz, değilse siyah yap
+    bw = img.point(lambda x: 0 if x < 128 else 255, '1')
+
+    # Yeni resmi kaydet
+    bw.save(output_path)
+    print(f"Siyah-beyaz resim başarıyla kaydedildi: {output_path}")
+
+
+# 📌 Dosya yolları (mutlaka çift \\ veya / kullan!)
+input_file = 'C:/phycherm/kou.png'
+output_file = 'C:/phycherm/kou renksiz.png'
+
+# Fonksiyonu çalıştır
+convert_to_bw(input_file, output_file)
+```
