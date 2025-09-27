@@ -1,24 +1,24 @@
-# 🖤 Siyah-Beyaz Resim Dönüştürücü
+#  Siyah-Beyaz Resim Dönüştürücü
 
 Bu proje, bir görüntüyü otomatik olarak **siyah-beyaz** hale getiren basit ama etkili bir Python betiğidir.  
 Kod, gri tonlamaya çevrilmiş bir resmi 128 eşik değeri kullanarak tamamen siyah ve beyaz piksellere dönüştürür.
 
 ---
 
-## 📷 Örnek:  
+##  Örnek:  
 **Girdi:** `kou.png`  
 **Çıktı:** `kou renksiz.png` _(sadece siyah ve beyaz piksellerle)_
 
 ---
 
-## 🛠️ Kullanılan Teknolojiler
+##  Kullanılan Teknolojiler
 
 - **Python 3**
 - **Pillow** (PIL - Python Imaging Library)
 
 ---
 
-## 🚀 Nasıl Kullanılır?
+##  Nasıl Kullanılır?
 
 ### 1. Pillow Kütüphanesini Kur
 
